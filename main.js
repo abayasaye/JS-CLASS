@@ -90,5 +90,42 @@ class Teacher {
         this.email= email;
     }
 }
-let teacherN
-const teachArray = []
+
+function theFuncSave () {
+    let teacherOne = new Teacher(
+        first_input.value,
+        second_input.value,
+         therd_input.value, 
+         four_input.value
+        );
+    const teachArray = [
+    
+    ]
+    if (teachArray.length < 4) {
+        teachArray.push(teacherOne)
+        console.log(teachArray)
+    }
+    teachArray.forEach(item => {
+        
+        let newTable = document.createElement("table")
+            document.body.appendChild(newTable)
+            let tHead = document.createElement("thead")
+            document.body.appendChild(tHead)
+            let tBody = document.createElement("tbody")
+            document.body.appendChild(tBody)
+            let tableR = document.createElement("tr")
+            document.body.appendChild(tableR)
+         
+        for (let key in item) {
+                let tableH = document.createElement("th")
+                    tableH.innerText += key + " ";
+                     tHead.appendChild(tableH)
+                    tableR.innerHTML += `<td>${item[key]}</td>` + " ";
+           
+        }
+    }); 
+                
+                
+  
+
+}
