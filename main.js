@@ -149,7 +149,7 @@ const newCourse = new Course ("mali" ,
 
 for (const key in newCourse) {
     document.body.innerHTML += `<h3>${key}:${newCourse[key]} </h3>`+ " ";
-    mygraduList.sort((a,b)=> a-b)
+    mygraduList.sort((a,b)=> b-a)
     myStuArray.sort()
     if(Array.isArray(newCourse[key])){
         document.body.innerHTML +=`<ul>${key}</ul>`;
